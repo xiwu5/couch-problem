@@ -7,11 +7,22 @@ class Couch:
     def area(self):
         return self.width * self.length
 
+class SleeperSofa(Couch):
+    def __init__(self, length, width):
+        super().__init__(length, width)
+        self.folded_out = False
+        self.sheets = None
 
-##########################################
-#       Add your new classes here!       #
-# (Make sure not to accidentally indent) #
-##########################################
+    def convert(self):
+        # Folded out
+        if not self.folded_out:
+            self.folded_out = True
+            self.width *= 2
+    
+        # Not folded out
+        elif self.sheets is None:
+            self.folded_out = False
+            self.width /= 2
 
 
 ########## WAVE 1 ##########
