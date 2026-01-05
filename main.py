@@ -24,6 +24,11 @@ class SleeperSofa(Couch):
             self.folded_out = False
             self.width /= 2
 
+# class Sheets:
+#     def 
+
+
+
 
 ########## WAVE 1 ##########
 # Checking the behavior for creating an instance of SleeperSofa
@@ -56,10 +61,12 @@ print("Wave 2 passed!")
 # Check behavior for creating Sheets
 silk_sheets = Sheets("silk")
 assert silk_sheets.material == "silk"
+print("1 pass")
 
 # Check behavior for default Sheets material
 cotton_sheets = Sheets()
 assert cotton_sheets.material == "cotton"
+print("2 pass")
 
 # Test putting on sheets
 my_sofa.convert()
